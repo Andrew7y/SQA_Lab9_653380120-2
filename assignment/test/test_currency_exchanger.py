@@ -38,3 +38,4 @@ class TestCurrencyExchanger(unittest.TestCase):
                                             params={'from': 'THB', 'to': 'KRW'})
         expected = 500 * 38.69
         self.assertEqual(result, expected)
+        self.assertEqual(38.69, self.mock_api_response.json()["result"]["KRW"])
